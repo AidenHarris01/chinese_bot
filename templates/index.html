@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chinese Audio Translator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+</head>
+<body>
+    <h1>Chinese Audio Translator</h1>
+    <div id="upload-area" class="upload-area">
+        <p>Drag and drop an audio file here or click to select</p>
+        <input type="file" id="file-input" accept="audio/*">
+    </div>
+    <div id="audio-player-container" class="hidden">
+        <audio id="audio-player" controls></audio>
+    </div>
+    <div id="translation-container" class="hidden">
+        <h2>Translation</h2>
+        <pre id="formatted-translation"></pre>
+    </div>
+    <div id="error-message" class="hidden" style="color: red; margin-top: 10px;"></div>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
